@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html ng-app="srvApp">
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>quote book</title>
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body ng-controller="mainCtrl">
 
-    <input type="text" placeholder="Add new quote!" ng-model='newQuoteText'></input>
-    <br/>
-    <input type="text" placeholder="Quotes author!" ng-model='newQuoteAuthor'></input>
-    <button ng-click="addQuote()">Add Quote</button>
-    <hr/>
-    <div>
-      Filter: <input type="text" ng-model='filterText'/>
-    </div>
-    <p ng-repeat = "quote in quotes | filter: filterText"></p>
+    <div class="maincontainer">
+<div class="inputcontain">
+      <span>"</span><input type="text" placeholder="      add new Quote" ng-model="newQuoteText"><span>"</span>
+      <input type="text" placeholder="       add new Author" ng-model="newQuoteAuthor">
+<button ng-click="addQuote()">+</button>
+     <div>
+Filter: <input type="text" ng-model='filterText'/>
+ </div>
+
+ <p ng-repeat = "quote in quotes | filter: filterText"></p>
+</div>
+
+    <div ng-repeat="quote in quotes">
+      <span class="text"><span>" </span>{{quote.text}}<span>"</span></span>
+    <span class="author">"{{quote.author}}" <button ng-click="deleteMe(quote.text)">X</button></span>
+  </div>
+</div>
 
 
-    <p ng-repeat = "quote in quotes track by $index">
-    <span class = 'text'>{{quote.text}}</span>
-    <span class = 'author'> -- {{quote.author}}</span>
-    <button ng-click = "deleteMe(quote.text)">Delete</button>
-  </p>
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="app.js"></script>
-  <script src="ctrl.js"></script>
-  <script src="service.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+    <script src="service.js"></script>
   </body>
 </html>

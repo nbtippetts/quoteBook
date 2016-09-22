@@ -1,1 +1,1 @@
-angular.module('srvApp', []);
+angular.module('myApp', []);

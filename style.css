@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.inputcontain {
+  border-bottom-style: outset;
+  border-radius: 8px;
+  color: #bfbfbf;
+}
+
+.inputcontain span {
+  font-size: 25px;
+  font-family: cursive;
+  color: black;
+}
+.inputcontain input {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.inputcontain button {
+  display: inline-flex;
+  float: right;
+  margin-top: 2.5%;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 22px;
+  height: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+}
+.maincontainer {
+  width: 40%;
+  justify-content: center;
+  border-left-style: outset;
+  border-right-style: outset;
+  border-radius: 8px;
+  background-color: #ffffe6;
+}
+.maincontainer .author {
+  display: flex;
+  border-radius: 8px;
+  border-bottom-style: outset;
+  justify-content: space-between;
+  color: #bfbfbf;
+}
+.text span {
+  font-size: 25px;
+  font-family: cursive;
+}
