@@ -23,7 +23,7 @@ angular.module('myApp').service('quoteData', function(){
   this.removeData = function(textToRemove){
      for (var i = 0; i < quotes.length; i++){
        if (quotes[i].text === textToRemove){
-         quotes.splice(i--, 1);
+         quotes.splice(i, 1);
        }
      }
   };
