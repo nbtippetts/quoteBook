@@ -10,7 +10,7 @@ angular.module('myApp').service('quoteData', function(){
   ];
   this.getData = function(){
     return quotes;
-  }
+  };
 
   this.addData = function(newQuote){
      if (newQuote.text && newQuote.author){
@@ -18,14 +18,14 @@ angular.module('myApp').service('quoteData', function(){
        return true;
      }
      return false;
-  }
+  };
 
   this.removeData = function(textToRemove){
      for (var i = 0; i < quotes.length; i++){
-       if (quotes[i].text.toLowerCase() === textToRemove.toLowerCase()){
+       if (quotes[i].text === textToRemove){
          quotes.splice(i--, 1);
        }
      }
-  }
+  };
 
-})
+});

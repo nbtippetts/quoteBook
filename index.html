@@ -8,22 +8,20 @@
   <body ng-controller="mainCtrl">
 
     <div class="maincontainer">
-<div class="inputcontain">
-      <span>"</span><input type="text" placeholder="      add new Quote" ng-model="newQuoteText"><span>"</span>
-      <input type="text" placeholder="       add new Author" ng-model="newQuoteAuthor">
-<button ng-click="addQuote()">+</button>
-     <div>
-Filter: <input type="text" ng-model='filterText'/>
- </div>
-
- <p ng-repeat = "quote in quotes | filter: filterText"></p>
-</div>
-
-    <div ng-repeat="quote in quotes">
-      <span class="text"><span>" </span>{{quote.text}}<span>"</span></span>
-    <span class="author">"{{quote.author}}" <button ng-click="deleteMe(quote.text)">X</button></span>
-  </div>
-</div>
+      <div class="inputcontain">
+        <span>"</span><input type="text" placeholder="      add new Quote" ng-model="newQuoteText"><span>"</span>
+        <input type="text" placeholder="       add new Author" ng-model="newQuoteAuthor">
+        <button ng-click="addQuote()">+</button>
+         <div>
+           Filter: <input type="text" ng-model='filterText'/>
+         </div>
+        <p ng-repeat = "quote in quotes | filter: filterText"></p>
+      </div>
+      <div ng-repeat="quote in quotes">
+        <span class="text"><span>" </span>{{quote.text}}<span>"</span></span>
+        <span class="author">"{{quote.author}}" <button ng-click="deleteMe(quote.text)">X</button></span>
+     </div>
+   </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
